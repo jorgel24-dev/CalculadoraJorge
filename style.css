@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body{
+    min-height: 80vh;
+    background-color: rgb(255, 106, 0);
+    display: grid;
+    place-items: center;
+}
+
+#Calculadora{
+    background-color: black;
+    color: white;
+    width: 400px;
+    height: 450px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    gap: 1.5rem;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.pantalla{
+    grid-column: 1/5;   
+    background-color: rgb(120, 116, 116); 
+    text-align: right;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.btn{
+    background-color:RGB(135, 206, 250);
+    color: black;
+    border: 0;
+     padding: 3rem 0.5 rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+}   
+
+.btn:hover{
+    background-color:  RGB(0, 102, 204);
+}
+
+#C{
+    background-color: red;
+}
+
+#C:hover{
+    background-color: rgb(176, 35, 35);
+}
+
+#borrar,#dividir,#multiplicar,#restar,#sumar,#igual,#resto,#raiz,#expon{
+    background-color: rgb(3, 250, 3);
+}
+
+#borrar:hover,#dividir:hover,#multiplicar:hover,#restar:hover,#sumar:hover,#igual:hover,#resto:hover,#raiz:hover,#expon:hover{
+    background-color: rgb(3, 130, 3);
+}
+
+#C{
+    grid-column: span 2;
+}
+
+#igual{
+    grid-column: span 3;
+}
