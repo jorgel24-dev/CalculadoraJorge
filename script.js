@@ -21,12 +21,17 @@
             }   
 
             if (boton.id === 'igual') {
-                try {
-                    Pantalla.textContent = eval(Pantalla.textContent);
-                } catch  {  
-                    Pantalla.textContent = 'Error';
+            try {
+                let resultado = eval(Pantalla.textContent);
+                if (resultado === Infinity || resultado === -Infinity || isNaN(resultado)) {
+                    Pantalla.textContent = 'Error: No Válido';
+                } else {
+                    Pantalla.textContent = resultado.toString();
                 }
-                return;
+            } catch (e) {  
+                Pantalla.textContent = 'Error: Sintaxis';
+            }
+            return;
             }
 
             if (boton.id === 'raiz') {
@@ -38,7 +43,7 @@
                 return;
             }
 
-            if (Pantalla.textContent === '0' || Pantalla.textContent === 'Error') {
+            if (Pantalla.textContent === '0' || Pantalla.textContent === 'Error' ||  Pantalla.textContent === 'Error: No Válido' || Pantalla.textContent === 'Error: Sintaxis') {
                 Pantalla.textContent = botonPulsado;
             }else{
                 Pantalla.textContent += botonPulsado;
